@@ -11,3 +11,9 @@ jobs:
 
       - name: Run a one-line script
         run: echo "Hello, world!"
+        
+      - shell: bash
+        env:
+          TEST_SECRET: ${{ secrets.TEST_SECRET }}
+        run: |
+          example-command "$TEST_SECRET"
