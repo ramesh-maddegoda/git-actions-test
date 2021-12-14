@@ -26,7 +26,7 @@ jobs:
       
       - shell: bash
         env:
-          TEST_TOKEN: ${{ secrets.TEST_TOKEN }}
+          TEST_TOKEN: ${{ secrets.TEST_SECRET }}
         run: |
           curl -v -H "Authorization: Bearer $TEST_TOKEN" -s -N http://ec2-18-116-19-214.us-east-2.compute.amazonaws.com:8081/api/hello
 
